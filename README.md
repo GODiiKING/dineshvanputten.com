@@ -44,7 +44,7 @@ The website includes:
 
 ## Live Demo
 
-Check out the live version of my portfolio: [Dinesh van Putten Portfolio](https://your-live-demo-link.com)
+Check out the live version of my portfolio: [Dineshvanputten.com](https://dineshvanputten.com/index.html)
 
 ## Prerequisites
 
