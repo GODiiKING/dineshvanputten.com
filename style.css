@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* General Reset and Global Styles */
 * {
     margin: 0; /* Removes default margin from all elements */
@@ -731,3 +732,664 @@ body {
     color: #ff5733; /* Change to your desired hover color */
 }
 
+=======
+/* General Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Add this line *//* Ensures consistent element sizing */
+}
+
+.dark-theme{
+    background-color: black;  /* Sets a dark background theme */
+}
+
+/* --- Header and Navigation Styling --- */
+/* Main header styling */
+/*---logo and menu design---*/
+/* Flexbox container for .header */
+.header {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(51, 49, 49, 0.481);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+
+/* Subheader with reduced height */
+.header-2{
+    min-height: 15vh;
+    width: 100%;/* Add your background image URL */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center; /* Center all text in the header */
+    
+}
+
+/* Navigation container styling */
+.nav-container {
+    text-align: center; /* Centers the navigation and image */
+    position: fixed; /* Fixes the nav bar at the top */
+    top: 0; /* Positions it at the very top of the page */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Makes it full width */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    background-color: rgba(0, 0, 0, 0.431); /* Optional: add background for visibility */
+    padding: 0.10rem; /* Optional: add padding */
+}
+
+/* Navigation bar design *//* Flexbox container for nav */
+nav {
+    display: inline-block; /* Aligns nav links in a row *//* Aligns navigation content horizontally */
+    padding: 2% 6%;
+    justify-content: center; /* Center nav content */
+    align-items: center;
+}
+
+/* Logo and navigation links */
+nav img {
+    width: 150px; /* Logo size */
+}
+
+/* Flexbox container for nav-links */
+.nav-links {
+    display: inline-block; /* Aligns the nav links with the logo *//* Aligns links horizontally */
+    margin-left: 20px; /* Space between logo and links *//* Space between links */
+}
+
+.nav-links ul {
+    list-style: none; /* Remove bullet points */
+}
+
+/* Flexbox for each list item in nav-links */
+.nav-links ul li {
+    display: inline-block;
+    padding: 2px 4px; /* Reduced further from 4px 8px *//* Spacing between links */
+    position: relative;
+}
+
+/* Link styling */
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+/* Hover effect for navigation links */
+.nav-links ul li::after {
+    content: '';
+    width: 0%; 
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
+/* Container for image and text */
+/*---textbox design---*//* Flexbox container for .image-container */
+.image-container {
+    position: absolute; /* Allows the image to sit underneath */
+    top: 51%; /* Adjusts vertical position */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image */
+    z-index: 1; /* Places the image behind the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the image horizontally */
+    margin-top: 30px; /* Adjust as needed */
+}
+
+
+/* --- Image Container and Textbox --- */
+/* Circular image styling */
+.circular-image {
+    width: 150px; /* Width of the circle */
+    height: 150px; /* Height should match width for a perfect circle */
+    background: url('images/myphoto.jpg') no-repeat center/contain; /* Maintain aspect ratio and fit within the circle */
+    border-radius: 50%; /* Makes the image a perfect circle */
+    margin-top: 105px; /* Space between the text and image */
+}
+
+.image-container p {
+    color: white; /* Text color for content inside the container */
+}
+
+/* Basic styling for the profile text */
+.profile-text {
+    margin: 0; /* Remove any margin */
+    font-size: 1.0rem; /* Adjust as necessary */
+    font-weight: bold; /* Optional: adjust font weight */
+    color: #333;
+    transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+/* Hover effect for profile text */
+.profile-text:hover {
+    color: #007bff; /* Change text color on hover */
+    transform: scale(1.0); /* Slightly increase text size */
+}
+
+/* Textbox overlay *//* Adjust the text-box styling */
+.text-box {
+    position: absolute; /* Places the text box over the image */
+    top: 25%; /* Adjust for desired vertical position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Places the text in front of the image */
+    color: white;
+}
+
+/* Basic styling for the h1 text */
+.text-box h1 {
+    font-size: 2.5rem; /* Increase or adjust the value as needed */
+    font-weight: 700;  /* Optional: Make it bolder */
+    color: #ffffff;    /* Optional: Adjust the color for better visibility */
+    margin-top: 90px;  /* Optional: Add spacing if needed */
+    transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+/* Hover effect for h1 text */
+.text-box h1:hover {
+    color: #007bff; /* Change text color on hover */
+    transform: scale(1.0); /* Slightly increase text size */
+    letter-spacing: 5px; /* Add space between letters */
+}
+
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+/*---social-icons---*/
+.social-icons {
+    display: flex; /* Use flexbox to center items */
+    justify-content: center; /* Center the icons */
+    margin-top: 10px; /* Space above the icons */
+}
+
+/* Hover animation for the social icons */
+.social-icon {
+    width: 45px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge the icons on hover */
+}
+
+/*---content-section---*//* Flexbox layout for content section */
+.content-section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Space around the section */
+}
+
+
+
+
+
+
+/* --- Paragraph Styling --- */
+/*----opening text----*/
+.para-2 h1{
+    text-align: center;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.para-2:hover h1{
+    background-color: yellow; /* Change background color to yellow on hover */
+}
+.para-2:hover a{
+    background-color: yellow; /* Change background color to yellow on hover */
+}
+
+
+.para-2 {
+    text-align: left; /* Center-aligns the text */
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-2 a {
+    display: block; /* Makes the link a block element */
+    font-size: 24px; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Space between link and paragraph */
+    color: #000; /* Change color if needed */
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-extra {
+    text-align: left;
+}
+
+.para-extra-2 {
+    text-align: left;
+    margin: 30px; /* Center the box and add space above and below */
+}
+
+/* Paragraph hover effect for .para-3 */
+.para-3 {
+    text-align: center;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+/* Hover effect for .para-3 */
+.para-3:hover {
+    color: #007bff; /* Change color to blue on hover */
+    transform: scale(1.00); /* Slightly scale up the paragraph */
+}
+
+.para-3x {
+    text-align: center;
+    font-size: 3.5rem; /* Adjust the value as needed for larger text */
+    line-height: 1.6; /* Adjust line height for better readability */
+    color: white;
+    
+
+}
+
+/* Styling for the About Me section */
+.para-4 {
+    width: 80%; /* Set the container width to 80% of the viewport */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: justify; /* Distribute text evenly for clean alignment */
+    padding: 20px; /* Add padding inside the container */
+    line-height: 1.8; /* Improve readability with increased line height */
+    color: #fff; /* Set text color */
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: Add a semi-transparent background */
+    border-radius: 10px; /* Add rounded corners to the container */
+}
+
+.para-5 {
+    margin: 20px 0; /* Add vertical spacing between paragraphs */
+    padding: 0 15px; /* Add extra padding on the sides for better spacing */
+    font-size: 16.5px; /* Adjust font size for readability */
+    word-spacing: 2px; /* Optional: Add space between words for improved clarity */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the text in About Me section */
+.para-5:hover {
+    color: #007bff; /* Change text color on hover */
+    transform: scale(1.0); /* Slightly increase text size */
+}
+
+.para-2 a.para-3 {
+    font-size: 4em; /* Adjust the value as needed for the desired size */
+    font-weight: bold; /* Optional: makes the text bold */
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+
+
+
+
+
+/* Additional customizations for sections */
+.para-2 a[href*="Portfolio About Page.html"] {
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-2 a[href*="Portfolio Project Page.html"] {
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-2 a[href*="Portfolio CV Page.html"] {
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-2 a[href*="Portfolio Contact Page.html"] {
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+
+/*-------footer---*/
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color: #ffffff;
+}
+
+.fa-heart-o {
+    color: white;
+}
+
+/* Project box container */
+/* Project Box Layout *//* Flexbox for project boxes */
+.project-box {
+    display: flex;
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    margin: 20px 0; /* Add vertical spacing between project boxes */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Semi-transparent background */
+    color: #fff; /* Text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+}
+
+/* Hover effect for project box */
+.project-box:hover {
+    transform: scale(1.0); /* Slightly scale up the box */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Add subtle shadow */
+}
+
+* Project title hover effect */
+.project-description h3 {
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for title */
+}
+
+/* Hover effect for project title */
+.project-description h3:hover {
+    color: #007bff; /* Change color to blue on hover */
+    transform: scale(1.0); /* Slightly scale the title up */
+}
+
+/* Paragraph and list item hover effect */
+.project-description p, .project-description ul {
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease; /* Smooth transition for paragraph and list */
+}
+
+/* Hover effect for paragraph and list */
+.project-description p:hover, .project-description ul:hover {
+    color: #007bff; /* Change color to blue on hover */
+    transform: scale(1.0); /* Slightly increase the size of the text */
+}
+
+/* Hover effect for list items */
+.project-description ul li:hover {
+    color: #007bff; /* Change the color of list items */
+    transform: scale(1.0); /* Slightly increase the size of list items */
+}
+
+/* Project CV Box Layout *//* Flexbox for project boxes */
+.project-box-1 {
+    display: flex;
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    margin: 20px 0; /* Add vertical spacing between project boxes */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Semi-transparent background */
+    color: #fff; /* Text color */
+}
+
+/* Image Styling */
+.project-image {
+    width: 350px;
+    height: 170px;
+    object-fit: cover; /* Ensure consistent image sizing */
+    border-radius: 10px; /* Add rounded corners */
+    margin-right: 20px; /* Space between image and text */
+}
+
+/* Project Description Styling */
+.project-description {
+    flex: 1; /* Allow description to take the remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.project-description h3 {
+    font-size: 20px;
+    margin-bottom: 10px; /* Space between title and paragraph */
+}
+
+.project-description p {
+    margin-bottom: 10px; /* Space between paragraphs */
+    line-height: 1.6; /* Improve readability */
+}
+
+.project-description ul {
+    margin: 10px 0;
+    padding-left: 20px; /* Indent list items */
+    list-style-type: disc; /* Use disc bullets */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-box {
+        flex-direction: column; /* Stack image and text vertically on small screens */
+        text-align: center; /* Center text in smaller layouts */
+    }
+
+    .project-image {
+        margin: 0 0 20px 0; /* Adjust margin for stacked layout */
+    }
+
+    .project-description {
+        text-align: center; /* Center-align text for small screens */
+    }
+}
+
+
+
+
+/* --- Contact Section --- */
+/* Contact Section Styling */
+.contact-section {
+    padding: 20px;
+    background-color: #37343478; /* Dark background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 20px; /* Adjust top margin as needed */
+    max-width: 400px; /* Limit the section width */
+    position: absolute; /* Allow positioning based on coordinates */
+    left: 580px; /* Move the section to the left */
+}
+
+.contact-section .contact-item {
+    display: flex;
+    align-items: center; /* Align icons and text */
+    gap: 5px; /* Space between icon and text */
+}
+
+.contact-section .contact-item img.icon {
+    width: 40px; /* Set icon size */
+    height: 40px;
+    border-radius: 5px; /* Optional: Rounded icons */
+}
+
+.contact-section .contact-item p {
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-section .contact-item a {
+    color: #2a86a2; /* Accent color for links */
+    text-decoration: none;
+}
+
+.contact-section .contact-item a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+
+
+
+
+/* --- Animations --- */
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 0.8s ease-in; /* Smooth fade-in on page load *//* Smooth fade-in effect on load */
+}
+
+
+
+
+
+
+/* Ensure better alignment and appearance of project boxes */
+/* Media Query for Responsive Layout Project */
+@media (max-width: 768px) {
+    /* Adjusting content-section to be more responsive */
+    .content-section {
+        flex-direction: column; /* Stack content vertically on small screens */
+        align-items: center; /* Center items horizontally */
+        padding: 15px; /* Add some padding for breathing room */
+        text-align: center; /* Center text for better readability */
+        display: flex; /* Use flexbox to align boxes in a row */
+    flex-wrap: wrap; /* Wrap boxes onto new lines as needed */
+    justify-content: space-between; /* Space between boxes */
+    gap: 30px; /* Add gap between boxes */
+    }
+
+    /* Adjust project box for better use of space */
+.project-box {
+    width: 48%; /* Each project box takes up nearly half the screen (for two columns layout) */
+    margin-bottom: 30px; /* Add space between project boxes */
+    padding: 20px; /* Add padding for content space */
+    text-align: center; /* Center text inside the project box */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    display: inline-block; /* Makes the boxes appear side by side */
+    vertical-align: top; /* Align boxes at the top */
+    transition: all 0.3s ease; /* Smooth transition on hover or resize */
+}
+
+/* Adjust project box on hover for better interactivity */
+.project-box:hover {
+    transform: scale(1.0); /* Slightly enlarge box on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* Adjust image inside the project box */
+.project-image {
+    width: 60%; /* Image takes 60% of the project box width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Add space below the image */
+    transition: all 0.3s ease; /* Smooth transition on resize */
+}
+
+/* Adjust project description text for readability */
+.project-description {
+    font-size: 18px; /* Larger font size for better readability */
+    line-height: 1.8; /* Increase line height for better readability */
+    padding: 0 20px; /* Add padding to left and right for better spacing */
+    text-align: left; /* Align text to the left */
+}
+
+/* Optional: Adjusting project description heading for better proportion */
+.project-description h3 {
+    font-size: 2rem; /* Larger heading for fullscreen */
+    margin-bottom: 15px; /* Space between title and paragraph */
+    font-weight: bold; /* Make heading bold */
+}
+
+/* Ensure links in project description are well-spaced */
+.project-description ul {
+    margin: 20px 0; /* Add more margin for better readability */
+    padding-left: 30px; /* Indent list items more */
+    list-style-type: full circle; /* Circle bullets for lists */
+}
+
+/* Adjust layout for wider screens */
+@media (min-width: 1024px) {
+    /* Project boxes take up less width, maintaining spacing */
+    .project-box {
+        width: 48%; /* Make project boxes take up about half of the screen width (two per row) */
+    }
+}
+
+/* Further optimization for very large screens (1080p or wider) */
+@media (min-width: 1920px) {
+    .project-box {
+        width: 30%; /* Reduce width to fit more boxes in the row */
+    }
+}
+
+
+    /* Make navigation items more compact on smaller screens */
+    .nav-container {
+        padding: 10px; /* Reduce padding for smaller screen size */
+    }
+
+    .nav-links ul li {
+        padding: 10px 5px; /* Reduce padding for more compact nav items */
+    }
+
+    /* Improve text readability in About sections */
+    .para-2, .para-3, .para-4 {
+        font-size: 1rem; /* Adjust font size to be more readable */
+        line-height: 1.8; /* Improve readability with slightly increased line height */
+        padding: 0 20px; /* Padding for better spacing */
+    }
+
+    /* Reduce text size for footer on smaller screens */
+    .footer {
+        font-size: 0.9rem; /* Make footer text smaller for better fit */
+        padding: 20px 0; /* Reduce padding to save space */
+    }
+
+    /* Adjust circular image for small screens */
+    .circular-image {
+        width: 120px; /* Make the circular image smaller */
+        height: 120px; /* Keep it circular */
+        margin-top: 100px; /* Adjust top margin to balance spacing */
+    }
+
+    /* Make contact section more compact */
+    .contact-section {
+        padding: 15px;
+        width: 100%; /* Ensure contact section takes full width */
+        margin-top: 15px; /* Add top margin for spacing */
+        left: 200px; /* Move the section to the left */
+    }
+}
+
+
+
+/* Styling for the Arcade Game Website and Nilda Pinto SBO link */
+.arcade-link a {
+    text-decoration: none; /* Remove the underline from the link */
+    color: #ffffff; /* Default text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Hover effect for the link */
+.arcade-link a:hover {
+    color: #ff5733; /* Set your desired hover color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Default styling for game links */
+.game-link {
+    text-decoration: none; /* Removes underline from the link */
+    color:  #fff; /* Default color */
+    font-weight: bold; /* Makes the text bold */
+    transition: color 0.3s ease; /* Smooth transition effect for color */
+}
+
+/* Hover effect for game links */
+.game-link:hover {
+    color: #ff5733; /* Change to your desired hover color */
+}
+
+>>>>>>> de062061e93d1e650ad55877ae25d714061c3cad

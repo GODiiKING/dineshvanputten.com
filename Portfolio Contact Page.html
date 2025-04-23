@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding, browser compatibility, and responsive design -->
+    <meta charset="UTF-8"> <!-- Defines character encoding as UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables responsive design across devices -->
+    
+    <!-- Page title that will be displayed in the browser tab -->
+    <title>Dinesh van Putten Contact Portfolio</title>
+    
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon for the webpage displayed in the browser tab -->
+    <link rel="icon" type="image/png" href="images/icon.png"/>
+    
+    <!-- Preconnect to Google Fonts to speed up font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Link to Google Fonts for custom font styling (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- Body section with dark theme class -->
+<body class="dark-theme">
+
+    <!-- Header section with navigation menu -->
+    <section class="header-2">
+        <div class="nav-container">
+            <nav class="logo">
+                <div class="nav-links">
+                    <!-- Navigation links to various pages of the portfolio -->
+                    <ul>
+                        <li><a href="Portfolio Home Page.html">HOME</a></li> <!-- Link to Home page -->
+                        <li><a href="Portfolio About Page.html">ABOUT</a></li> <!-- Link to About page -->
+                        <li><a href="Portfolio Project Page.html">PROJECTS</a></li> <!-- Link to Projects page -->
+                        <li><a href="Portfolio CV Page.html">CV</a></li> <!-- Link to CV page -->
+                        <li><a href="Portfolio Contact Page.html">CONTACT</a></li> <!-- Link to Contact page -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Introduction paragraph for the Contact section -->
+    <p class="para-3">Feel free to contact me anytime!</p>
+    <p class="para-3">Here are my social media links, and you can also reach out to me via email.</p>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-info">
+            <!-- Email contact -->
+            <div class="contact-item">
+                <img src="images/email1.png" alt="Email Icon" class="icon"> <!-- Icon for email -->
+                <p>
+                    Email: 
+                    <a href="mailto:dineshvanputten@outlook.com">dineshvanputten@outlook.com</a> <!-- Email link -->
+                </p>
+            </div>
+
+            <!-- LinkedIn contact -->
+            <div class="contact-item">
+                <img src="images/linkedin1.png" alt="LinkedIn Icon" class="icon"> <!-- Icon for LinkedIn -->
+                <p>
+                    LinkedIn: 
+                    <a href="https://www.linkedin.com/in/dinesh-van-putten-69441b18a/" target="_blank">@Dinesh van Putten</a> <!-- LinkedIn link -->
+                </p>
+            </div>
+
+            <!-- GitHub contact -->
+            <div class="contact-item">
+                <img src="images/github1.png" alt="GitHub Icon" class="icon"> <!-- Icon for GitHub -->
+                <p>
+                    GitHub: 
+                    <a href="https://github.com/GODiiKING" target="_blank">@GODIIKING</a> <!-- GitHub link -->
+                </p>
+            </div>
+
+            <!-- freeCodeCamp contact -->
+            <div class="contact-item">
+                <img src="images/ffc1.jpeg" alt="FreeCodeCamp Icon" class="icon"> <!-- Icon for freeCodeCamp -->
+                <p>
+                    freeCodeCamp: 
+                    <a href="https://www.freecodecamp.org/GODiKING" target="_blank">@GODiKING</a> <!-- freeCodeCamp link -->
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section (Optional) -->
+    <!-- Uncomment the section below to enable the footer -->
+    <!--
+    <footer class="footer">
+        <p>© 2024 Dinesh van Putten. All rights reserved.</p> <--- Footer copyright -->
+    </footer>
+    
+
+    <!-- JavaScript for smooth navigation transitions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all links in the document
+            const links = document.querySelectorAll('a');
+    
+            links.forEach(link => {
+                // Add a click event listener to each link
+                link.addEventListener('click', function (event) {
+                    const href = this.getAttribute('href'); // Get the href attribute of the link
+    
+                    if (href && !href.startsWith('#')) { // Skip anchor links
+                        event.preventDefault(); // Prevent default navigation behavior
+                        
+                        // Apply a fade-out animation to the body
+                        document.body.style.animation = 'fadeOut 0.2s ease-out';
+                        
+                        // Redirect after the fade-out animation completes
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 500); // Delay matches the animation duration
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
