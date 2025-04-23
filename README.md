@@ -51,7 +51,7 @@ The About page provides a deeper look into my educational background, learning j
 The Projects page showcases some of my key projects, including:
 - **Arcade Game Website**: A collection of games like Tic Tac Toe, Math Game, and Space Invasion.
 - **Nilda Pinto SBO Website**: A website built for a school project using HTML and CSS.
-- ![alt text](project-1.png)
+  ![alt text](project-1.png)
 
 ### Contact Page
 The Contact page provides my contact information and links to my social media profiles.
