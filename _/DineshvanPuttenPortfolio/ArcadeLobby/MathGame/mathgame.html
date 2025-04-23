@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character encoding and responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/controllericon.png"/>
+  
+  <!-- Link to Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Link to external CSS file for styling -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Website title -->
+  <title>Math Game</title>
+</head>
+<body>
+  
+  <!-- Audio element for playing sound on certain events -->
+  <audio id="myAudio">
+    <!-- Source of the audio file (in MP3 format) -->
+    <source src="wrong.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Header section of the webpage -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <!-- Website logo and title with a trophy icon -->
+        <h2><span><i class="fa fa-trophy" aria-hidden="true"></i></span> MATH</h2>
+        
+        <!-- Navigation menu for different math operations -->
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Addition</a></li>
+            <li><a href="subtract.html">Subtract</a></li>
+            <li><a href="multiply.html">Multiply</a></li>
+            <li><a href="divide.html">Divide</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Main content wrapper -->
+  <div class="wrapper">
+    <!-- Equation display area -->
+    <div class="equation">
+      <!-- First number in the equation (dynamic, based on JavaScript) -->
+      <h1 id="num1" style="color:#FE4A49"></h1>
+      <!-- Operator (fixed as addition in this case) -->
+      <h1 style="color: #2AB7CA;">+</h1>
+      <!-- Second number in the equation -->
+      <h1 id="num2" style="color: #FED766">1</h1>
+      <!-- Equals sign -->
+      <h1 style="color: #F86624">=</h1>
+      <!-- Placeholder for the result (question mark) -->
+      <h1 style="color: gray">?</h1>
+    </div>
+    
+    <!-- Answer options for the user to select -->
+    <div class="answer-options">
+      <!-- First option -->
+      <div class="options" style="background-color: #FE4A49;">
+        <h1 id="option1">1</h1>
+      </div>
+      <!-- Second option -->
+      <div class="options" style="background-color: #2AB7CA;">
+        <h1 id="option2">2</h1>
+      </div>
+      <!-- Third option -->
+      <div class="options" style="background-color: #FED766;">
+        <h1 id="option3">3</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="info">
+    <p><a href="arcade.html" class="back-to-games">Back to Games</a></p>
+  </div>
+
+  <!-- Link to external JavaScript file for functionality -->
+  <script src="add.js"></script>
+  
+</body>
+</html>

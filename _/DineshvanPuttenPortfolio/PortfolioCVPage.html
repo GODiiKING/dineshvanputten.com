@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding, compatibility, and responsive design -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for universal text compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables responsive scaling on all devices -->
+    
+    <!-- Page title displayed in the browser tab -->
+    <title>CV</title>
+    
+    <!-- External CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon for the webpage -->
+    <link rel="icon" type="image/png" href="images/icon.png"/>
+    
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts link for custom font styling (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme"> <!-- Applies the "dark-theme" class for styling -->
+
+    <!-- Header section with navigation menu -->
+    <section class="header-2">
+        <div class="nav-container">
+            <nav class="logo"> <!-- Navigation area -->
+                <div class="nav-links"> <!-- Links to portfolio pages -->
+                    <ul>
+                        <li><a href="index.html">HOME</a></li> <!-- Link to Home page -->
+                        <li><a href="PortfolioAboutPage.html">ABOUT</a></li> <!-- Link to About page -->
+                        <li><a href="PortfolioProjectPage.html">PROJECTS</a></li> <!-- Link to Projects page -->
+                        <li><a href="PortfolioCVPage.html">CV</a></li> <!-- Link to CV page -->
+                        <li><a href="PortfolioContactPage.html">CONTACT</a></li> <!-- Link to Contact page -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Section showcasing the CV -->
+    <section>
+        <div class="project-box-1">
+            <!-- Link to download or view the CV -->
+            <a href="images/my-cv.pdf">
+                <img src="images/pdf.jpg" alt="Download CV" class="project-image"> <!-- Image representation of the CV -->
+            </a>
+            <div class="project-description">
+                <h3 class="arcade-link">
+                    <a href="file:///C:/Users/dinoz/OneDrive/Desktop/My%20Portfolio/Dinesh%20van%20Putten%20Portfolio/images/my-cv.pdf" target="_blank">Find CV Here!</a>
+                </h3><!-- Heading for the CV section -->
+                <p>If you're interested in learning more about my background and experiences,</p>
+                <p>I invite you to take a look at my CV.</p>
+                <p>I hope you find it informative and useful as you explore my journey in software development and beyond.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <!-- Uncomment the footer below to enable it -->
+    <!--
+    <section class="footer footer1">
+        <p>© 2024 Dinesh van Putten. All rights reserved.</p> <--- Footer with copyright notice -->
+    </section>
+    
+
+    <!-- JavaScript for smooth navigation transitions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all anchor links
+            const links = document.querySelectorAll('a');
+    
+            links.forEach(link => {
+                // Add a click event listener to each link
+                link.addEventListener('click', function (event) {
+                    const href = this.getAttribute('href'); // Get the value of the href attribute
+    
+                    if (href && !href.startsWith('#')) { // Skip anchor links
+                        event.preventDefault(); // Prevent default link navigation
+                        
+                        // Apply a fade-out animation to the body
+                        document.body.style.animation = 'fadeOut 0.2s ease-out';
+                        
+                        // Delay navigation to match the animation duration
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 500); // Matches fade-out animation duration
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

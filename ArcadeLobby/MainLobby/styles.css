@@ -1,0 +1,206 @@
+/* Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full Height */
+html, body {
+    height: 100%;
+    overflow: hidden; /* Disable scrolling */
+    margin: 0; /* Ensure no default margin on the body */
+}
+
+/* Body Font */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-image: url('https://th.bing.com/th/id/R.f83301d5ad76149646e86b426f4f8cc7?rik=GZvCDA1znDLRWQ&pid=ImgRaw&r=0');
+    background-size: cover; /* Cover ensures the image covers the area */
+    background-position: center; /* Center aligns the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Adjusting the button's position */
+#enter-lobby {
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px; /* Space between Enter Lobby and auth buttons */
+}
+
+#enter-lobby:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* Auth Buttons */
+.auth-buttons a {
+    text-decoration: none; /* Remove underline */
+}
+
+.auth-buttons button {
+    /* Existing button styles */
+    padding: 15px 30px; /* Button padding */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Font weight */
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.8); /* More opaque background for visibility */
+    border: 2px solid white; /* Border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+    text-transform: uppercase; /* Uppercase text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+    flex: 1; /* Equal width for both buttons */
+    margin: 0 5px; /* Margin between buttons */
+}
+
+
+.auth-buttons button:hover {
+    background-color: rgba(0, 0, 0, 1); /* Fully opaque on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Bubbles */
+.bubbles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute; /* Change back to absolute */
+    bottom: 0; /* Set it to 0 to position at the bottom */
+    margin-bottom: 10px; /* Optional: add space from the bottom */
+    pointer-events: none; /* Prevent interaction with the bubbles */
+}
+
+.bubbles img {
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+
+/* Bubble Animation */
+@keyframes bubble {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+
+/* Bubbles img:nth-child */
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+    width: 20px;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 7s;
+    width: 35px;
+}
+
+/* Media Queries (optional) */
+@media (max-width: 768px) {
+    .container {
+        background-size: cover; /* Ensure it covers the area on smaller screens */
+    }
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Hidden initially */
+}
+
+.black-box {
+    background-color: rgba(0, 0, 0, 0.99); /* More opaque black background */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center align text */
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+.progress-bar {
+    width: 406px; /* Set to your desired width */
+    height: 21px;
+    background: #111;
+    border-radius: 13px;
+    padding: 3px;
+    box-sizing: border-box;
+    position: relative; /* Position relative to contain the absolute elements */
+}
+
+.progress {
+    width: 0; /* Start with 0 width */
+    height: 100%; /* Make it the full height of the progress bar */
+    background: #d5c6cb;
+    border-radius: 10px; /* Ensure rounded corners */
+    position: absolute; /* Positioning relative to .progress-bar */
+    left: 0; /* Align to the left */
+    transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+.percent {
+    color: #999;
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.text {
+    color: #fdb5ca;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 21px;
+}
+
+
+@media (max-width: 480px) {
+    #enter-lobby {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+    .bubbles img {
+        width: 30px;
+    }
+}

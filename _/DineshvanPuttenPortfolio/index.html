@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding, browser compatibility, and responsive layout -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title displayed in the browser tab -->
+    <title>Dinesh van Putten Home Portfolio</title>
+    
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon for the webpage -->
+    <link rel="icon" type="image/png" href="images/icon.png"/>
+    
+    <!-- Preconnect to Google Fonts to optimize font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts link for custom font styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <!-- Header section containing logo, navigation, and intro text -->
+    <section class="header">
+        <div class="nav-container">
+            <!-- Navigation bar with logo and links -->
+            <nav class="logo">
+                <div class="nav-links">
+                    <ul>
+                        <!-- Navigation links to other pages in the portfolio -->
+                        <li><a href="index.html">HOME</a></li> <!-- Link to Home page -->
+                        <li><a href="PortfolioAboutPage.html">ABOUT</a></li> <!-- Link to About page -->
+                        <li><a href="PortfolioProjectPage.html">PROJECTS</a></li> <!-- Link to Projects page -->
+                        <li><a href="PortfolioCVPage.html">CV</a></li> <!-- Link to CV page -->
+                        <li><a href="PortfolioContactPage.html">CONTACT</a></li> <!-- Link to Contact page -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Main title text with your name -->
+        <div class="text-box">
+            <h1>Dinesh <br>van Putten</h1>
+            <br>
+            <br>
+        </div>
+        
+        <!-- Profile image and bio text -->
+        <div class="image-container">
+            <!-- Profile image displayed in a circular style -->
+            <img src="images/myphoto.jpg" alt="MyPh" class="circular-image">
+            <br>
+            
+            <!-- Profile description text -->
+            <p class="profile-text">My name is Dinesh van Putten.</p>
+            <p class="profile-text">I am a software development student.</p>
+            <p class="profile-text">
+                I'm always demonstrating my capabilities as a developer 
+                but also reflect my commitment to growth, collaboration, and integrity within the tech world.
+            </p>
+            
+            <!-- Social media links with icons -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/dinesh-van-putten-69441b18a/" target="_blank">
+                    <img src="images/linkedin1.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com/GODiiKING" target="_blank">
+                    <img src="images/github1.png" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://www.freecodecamp.org/GODiKING" target="_blank">
+                    <img src="images/ffc1.jpeg" alt="freeCodeCamp" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for smooth page transition -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all anchor links in the document
+            const links = document.querySelectorAll('a');
+    
+            links.forEach(link => {
+                // Add a click event listener to each link
+                link.addEventListener('click', function (event) {
+                    const href = this.getAttribute('href'); // Get the link's href attribute
+    
+                    // Check if the link is not an anchor (#) link
+                    if (href && !href.startsWith('#')) {
+                        event.preventDefault(); // Prevent the default navigation behavior
+    
+                        // Add a fade-out animation to the body
+                        document.body.style.animation = 'fadeOut 0.2s ease-out';
+                        
+                        // Delay navigation to allow the animation to complete
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 500); // Matches the duration of the fade-out animation
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

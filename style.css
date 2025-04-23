@@ -1,0 +1,733 @@
+/* General Reset and Global Styles */
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    font-family: 'Poppins', sans-serif; /* Sets the font for the entire page */
+    box-sizing: border-box; /* Ensures consistent element sizing by including padding and border in the element's total width and height */
+}
+
+.dark-theme {
+    background-color: black; /* Sets a dark background theme for elements with this class */
+}
+
+/* --- Header and Navigation Styling --- */
+/* Main header styling */
+/* --- logo and menu design --- */
+/* Flexbox container for .header */
+.header {
+    display: flex; /* Enables Flexbox layout */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    min-height: 100vh; /* Ensures the header takes up the full height of the viewport */
+    width: 100%; /* Ensures the header spans the full width of the page */
+    background-color: rgba(51, 49, 49, 0.481); /* Sets a semi-transparent background color */
+    background-position: center; /* Centers the background image */
+    background-size: cover; /* Ensures the background image covers the entire header */
+    position: relative; /* Allows positioning of child elements relative to the header */
+    text-align: center; /* Centers the text inside the header */
+}
+
+/* --- Subheader Styling --- */
+/* Subheader with reduced height */
+.header-2 {
+    min-height: 15vh; /* Sets the minimum height to 15% of the viewport height */
+    width: 100%; /* Ensures the subheader spans the full width of the viewport */
+    /* Add your background image URL here if required */
+    background-position: center; /* Centers the background image horizontally and vertically */
+    background-size: cover; /* Ensures the background image covers the entire element without distortion */
+    position: relative; /* Sets the position for potential child elements to be positioned relative to this */
+    text-align: center; /* Centers all text horizontally within the subheader */
+}
+
+/* Navigation container styling */
+.nav-container {
+    text-align: center; /* Centers the navigation and image */
+    position: fixed; /* Fixes the nav bar at the top */
+    top: 0; /* Positions it at the very top of the page */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Makes it full width */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    background-color: rgba(0, 0, 0, 0.431); /* Optional: add background for visibility */
+    padding: 0.10rem; /* Optional: add padding */
+}
+
+/* --- Navigation Bar Design --- */
+/* Flexbox container for nav */
+nav {
+    display: inline-block; /* Aligns nav links in a row by displaying the nav as an inline-block element */
+    padding: 2% 6%; /* Adds padding around the navigation links (top/bottom 2%, left/right 6%) */
+    justify-content: center; /* Centers the navigation content horizontally within the nav */
+    align-items: center; /* Aligns the navigation items vertically within the nav */
+}
+
+/* Logo and navigation links */
+nav img {
+    width: 150px; /* Logo size */
+}
+
+/* Flexbox container for nav-links */
+.nav-links {
+    display: inline-block; /* Aligns the nav links with the logo *//* Aligns links horizontally */
+    margin-left: 20px; /* Space between logo and links *//* Space between links */
+}
+
+/* --- Navigation Links List Styling --- */
+.nav-links ul {
+    list-style: none; /* Remove bullet points from the list items */
+}
+
+/* --- Flexbox for Each List Item in nav-links --- */
+.nav-links ul li {
+    display: inline-block; /* Display list items in a row instead of stacked vertically */
+    padding: 2px 4px; /* Reduced padding from 4px 8px for tighter spacing between links */
+    position: relative; /* Position each list item relative to its normal position for potential positioning adjustments (e.g., for dropdowns or hover effects) */
+}
+
+/* --- Link Styling for Navigation Links --- */
+.nav-links ul li a {
+    color: white; /* Sets the text color of the navigation links to white */
+    text-decoration: none; /* Removes underline from links to keep the design clean */
+    font-size: 13px; /* Sets the font size of the links to 13px for consistent readability */
+}
+
+/* --- Hover Effect for Navigation Links --- */
+.nav-links ul li::after {
+    content: ''; /* Generates an empty pseudo-element for the hover effect */
+    width: 0%; /* Initially sets the width of the pseudo-element to 0% */
+    height: 2px; /* Defines the height of the underline effect */
+    background: red; /* Sets the color of the underline to red */
+    display: block; /* Ensures the pseudo-element behaves as a block-level element */
+    margin: auto; /* Centers the pseudo-element horizontally */
+    transition: 0.5s; /* Adds a smooth transition for the width change */
+}
+
+/* --- Hover Effect Expansion for Navigation Links --- */
+.nav-links ul li:hover::after {
+    width: 100%; /* Expands the width of the underline to 100% on hover */
+}
+
+
+
+
+
+
+/* Container for image and text */
+/*---textbox design---*//* Flexbox container for .image-container */
+.image-container {
+    position: absolute; /* Allows the image to sit underneath */
+    top: 51%; /* Adjusts vertical position */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image */
+    z-index: 1; /* Places the image behind the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the image horizontally */
+    margin-top: 30px; /* Adjust as needed */
+}
+
+/* --- Image Container and Textbox --- */
+/* Circular image styling */
+.circular-image {
+    width: 150px; /* Width of the circle */
+    height: 150px; /* Height should match width for a perfect circle */
+    background: url('images/myphoto.jpg') no-repeat center/contain; /* Maintain aspect ratio and fit within the circle */
+    border-radius: 50%; /* Makes the image a perfect circle */
+    margin-top: 105px; /* Space between the text and image */
+}
+
+/* --- Image Container Text Styling --- */
+.image-container p {
+    color: white; /* Sets the text color to white for better contrast inside the container */
+}
+
+
+
+
+
+/* Basic styling for the profile text */
+.profile-text {
+    margin: 0; /* Remove any margin */
+    font-size: 1.0rem; /* Adjust as necessary */
+    font-weight: bold; /* Optional: adjust font weight */
+    color: #333; /* Text color set to a dark gray shade for improved readability */
+    transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+/* Textbox overlay *//* Adjust the text-box styling */
+.text-box {
+    position: absolute; /* Places the text box over the image */
+    top: 25%; /* Adjust for desired vertical position */
+    left: 50%; /* Centers the text box horizontally */
+    transform: translate(-50%, -50%); /* Adjusts position to perfectly center the box */
+    text-align: center; /* Centers the text inside the box */
+    z-index: 2; /* Places the text in front of the image */
+    color: white; /* Sets text color to white for visibility against dark backgrounds */
+}
+
+/* Basic styling for the h1 text */
+.text-box h1 {
+    font-size: 2.5rem; /* Increase or adjust the value as needed */
+    font-weight: 700;  /* Optional: Make it bolder */
+    color: #ffffff;    /* Optional: Adjust the color for better visibility */
+    margin-top: 90px;  /* Optional: Add spacing if needed */
+    transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+.text-box p {
+    margin: 10px 0 40px; /* Adds margin: 10px on top, 0px on sides, 40px at the bottom */
+    font-size: 14px; /* Sets the font size to 14px for the text inside the text box */
+}
+
+
+
+
+
+
+
+
+/*---social-icons---*/
+.social-icons {
+    display: flex; /* Use flexbox to center items */
+    justify-content: center; /* Center the icons */
+    margin-top: 10px; /* Space above the icons */
+}
+
+/* Hover animation for the social icons */
+.social-icon {
+    width: 45px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge the icons on hover */
+}
+
+/*---content-section---*//* Flexbox layout for content section */
+.content-section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Space around the section */
+}
+
+
+
+
+
+
+/* --- Paragraph Styling --- */
+/*----opening text----*/
+.para-2 h1{
+    text-align: center;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.para-2:hover h1{
+    background-color: yellow; /* Change background color to yellow on hover */
+}
+.para-2:hover a{
+    background-color: yellow; /* Change background color to yellow on hover */
+}
+
+.para-2 {
+    text-align: left; /* Center-aligns the text */
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-2 a {
+    display: block; /* Makes the link a block element */
+    font-size: 24px; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Space between link and paragraph */
+    color: #000; /* Change color if needed */
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-extra {
+    text-align: left; /* Aligns the text to the left within the element */
+}
+
+.para-extra-2 {
+    text-align: left; /* Aligns the text to the left within the element */
+    margin: 30px; /* Adds 30px margin on all sides (top, right, bottom, left) of the element for spacing */
+}
+
+/* Paragraph hover effect for .para-3 */
+.para-3 {
+    text-align: center; /* Centers the text horizontally within its container */
+    color: white; /* Sets the text color to white */
+    transition: color 0.3s ease, transform 0.3s ease; /* Adds smooth transitions for color and transform properties */
+}
+
+.para-3x {
+    text-align: center; /* Centers the text horizontally within its container */
+    font-size: 3.5rem; /* Sets the font size to 3.5rem (larger text), adjust as needed */
+    line-height: 1.6; /* Adjusts the line height for better readability between lines of text */
+    color: white; /* Sets the text color to white */
+}
+
+/* Styling for the About Me section */
+.para-4 {
+    width: 80%; /* Set the container width to 80% of the viewport */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: justify; /* Distribute text evenly for clean alignment */
+    padding: 20px; /* Add padding inside the container */
+    line-height: 1.8; /* Improve readability with increased line height */
+    color: #fff; /* Set text color */
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: Add a semi-transparent background */
+    border-radius: 10px; /* Add rounded corners to the container */
+}
+
+.para-5 {
+    margin: 20px 0; /* Add vertical spacing between paragraphs */
+    padding: 0 1px; /* Add extra padding on the sides for better spacing */
+    font-size: 16.5px; /* Adjust font size for readability */
+    word-spacing: 1px; /* Optional: Add space between words for improved clarity */
+}
+
+
+
+
+
+/* Additional customizations for sections */
+.para-2 a[href*="Portfolio About Page.html"] {
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-2 a[href*="Portfolio Project Page.html"] {
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-2 a[href*="Portfolio CV Page.html"] {
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+.para-2 a[href*="Portfolio Contact Page.html"] {
+    font-family: 'Lexend Giga', sans-serif;  /* Apply Lexend Giga */
+}
+
+
+
+
+
+/*-------footer---*/
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color: #ffffff;
+}
+
+.fa-heart-o {
+    color: white;
+}
+
+
+
+
+
+
+/* Project box container */
+/* Project Box Layout *//* Flexbox for project boxes */
+.project-box {
+    display: flex; /* Enables flexbox layout for the container */
+    align-items: center; /* Vertically centers content in the container */
+    justify-content: center; /* Horizontally centers content in the container */
+    margin: 20px 0; /* Adds vertical spacing between project boxes */
+    padding: 20px; /* Adds padding inside the project box for spacing around content */
+    border-radius: 10px; /* Rounds the corners of the project box */
+    background-color: rgba(0, 0, 0, 0.7); /* Sets a semi-transparent black background for the project box */
+    color: #fff; /* Sets the text color to white */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds smooth animations for transform and box-shadow when hovered */
+}
+
+
+/* Hover effect for project box */
+.project-box:hover {
+    transform: scale(1.0); /* Slightly scale up the box (1.0 means no scaling, you can increase the value for a more noticeable effect) */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow beneath the project box to create a lifted effect */
+}
+
+/* Project title hover effect */
+.project-description h3 {
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for title */
+}
+
+/* Paragraph and list item hover effect */
+.project-description p, .project-description ul {
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease; /* Smooth transition for paragraph and list */
+}
+
+/* Project CV Box Layout *//* Flexbox for project boxes */
+.project-box-1 {
+    display: flex;
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    margin: 20px 0; /* Add vertical spacing between project boxes */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Semi-transparent background */
+    color: #fff; /* Text color */
+}
+
+/* Image Styling */
+.project-image {
+    width: 350px;
+    height: 170px;
+    object-fit: cover; /* Ensure consistent image sizing */
+    border-radius: 10px; /* Add rounded corners */
+    margin-right: 20px; /* Space between image and text */
+}
+
+/* Project Description Styling */
+.project-description {
+    flex: 1; /* Allow description to take the remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.project-description h3 {
+    font-size: 20px;
+    margin-bottom: 10px; /* Space between title and paragraph */
+}
+
+.project-description p {
+    margin-bottom: 10px; /* Space between paragraphs */
+    line-height: 1.6; /* Improve readability */
+}
+
+.project-description ul {
+    margin: 10px 0;
+    padding-left: 20px; /* Indent list items */
+    list-style-type: disc; /* Use disc bullets */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-box {
+        flex-direction: column; /* Stack image and text vertically on small screens */
+        text-align: center; /* Center text in smaller layouts */
+    }
+
+    .project-image {
+        margin: 0 0 20px 0; /* Adjust margin for stacked layout */
+    }
+
+    .project-description {
+        text-align: center; /* Center-align text for small screens */
+    }
+}
+
+
+
+
+
+/* --- Animations --- */
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 0.8s ease-in; /* Smooth fade-in on page load *//* Smooth fade-in effect on load */
+}
+
+
+
+
+
+
+/* Ensure better alignment and appearance of project boxes */
+/* Media Query for Responsive Layout Project */
+@media (max-width: 768px) {
+    /* Adjusting content-section to be more responsive */
+    .content-section {
+        flex-direction: column; /* Stack content vertically on small screens */
+        align-items: center; /* Center items horizontally */
+        padding: 15px; /* Add some padding for breathing room */
+        text-align: center; /* Center text for better readability */
+        display: flex; /* Use flexbox to align boxes in a row */
+    flex-wrap: wrap; /* Wrap boxes onto new lines as needed */
+    justify-content: space-between; /* Space between boxes */
+    gap: 30px; /* Add gap between boxes */
+    }
+
+    /* Adjust project box for better use of space */
+.project-box {
+    width: 48%; /* Each project box takes up nearly half the screen (for two columns layout) */
+    margin-bottom: 30px; /* Add space between project boxes */
+    padding: 20px; /* Add padding for content space */
+    text-align: center; /* Center text inside the project box */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    display: inline-block; /* Makes the boxes appear side by side */
+    vertical-align: top; /* Align boxes at the top */
+    transition: all 0.3s ease; /* Smooth transition on hover or resize */
+}
+
+/* Adjust project box on hover for better interactivity */
+.project-box:hover {
+    transform: scale(1.0); /* Slightly enlarge box on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* Adjust image inside the project box */
+.project-image {
+    width: 60%; /* Image takes 60% of the project box width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Add space below the image */
+    transition: all 0.3s ease; /* Smooth transition on resize */
+}
+
+/* Adjust project description text for readability */
+.project-description {
+    font-size: 18px; /* Larger font size for better readability */
+    line-height: 1.8; /* Increase line height for better readability */
+    padding: 0 20px; /* Add padding to left and right for better spacing */
+    text-align: left; /* Align text to the left */
+}
+
+/* Optional: Adjusting project description heading for better proportion */
+.project-description h3 {
+    font-size: 2rem; /* Larger heading for fullscreen */
+    margin-bottom: 15px; /* Space between title and paragraph */
+    font-weight: bold; /* Make heading bold */
+}
+
+/* Ensure links in project description are well-spaced */
+.project-description ul {
+    margin: 20px 0; /* Add more margin for better readability */
+    padding-left: 30px; /* Indent list items more */
+    list-style-type: full circle; /* Circle bullets for lists */
+}
+
+/* General styling for project boxes */
+.project-box {
+    width: 100%; /* Default to full width for small screens */
+    margin: 0 auto; /* Center-align boxes */
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+/* Adjust layout for tablets and small desktops */
+@media (min-width: 768px) {
+    .project-box {
+        width: 48%; /* Two boxes per row */
+    }
+}
+
+/* Adjust layout for wider screens */
+@media (min-width: 1024px) {
+    .project-box {
+        width: 48%; /* Maintain two per row for moderate screens */
+    }
+}
+
+/* Further optimization for very large screens (1080p or wider) */
+@media (min-width: 1920px) {
+    .project-box {
+        width: 30%; /* Fit more boxes in a row */
+    }
+}
+
+/* Optional: Add small gap between boxes */
+.project-box:not(:last-child) {
+    margin-bottom: 16px; /* Add spacing between boxes */
+}
+
+/* Example container adjustments for small screens */
+.container {
+    padding: 16px; /* Add padding for smaller devices */
+}
+
+/* Ensure proper scaling for very small screens */
+@media (max-width: 480px) {
+    .project-box {
+        width: 100%; /* Ensure boxes stack vertically */
+    }
+
+    .container {
+        padding: 8px; /* Slightly reduce padding for very small screens */
+    }
+}
+
+/* Default mobile-first styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-container {
+    margin-bottom: 20px;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.text-box h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+.circular-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-text {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.social-icons a {
+    margin: 5px;
+    display: inline-block;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+/* Mobile first: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .text-box h1 {
+        font-size: 1.6rem;
+    }
+
+    .image-container {
+        padding: 0 15px;
+        margin-top: 20px; /* Added margin-top for more space between the image and text */
+        text-align: center;
+    }
+
+    .profile-text {
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+}
+
+/* Adjust layout for tablets and desktops */
+@media (min-width: 768px) {
+    .text-box h1 {
+        font-size: 2.5rem;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px; /* Added margin-top for more space between the image and text */
+    }
+
+    .profile-text {
+        font-size: 1.3rem;
+        margin-top: 10px; /* Added margin-top to space text from the image */
+    }
+}
+
+/* For large screens and desktops */
+@media (min-width: 1024px) {
+    .nav-links ul {
+        justify-content: flex-start;
+    }
+
+    .text-box h1 {
+        font-size: 3rem;
+    }
+}
+
+
+
+    /* Make navigation items more compact on smaller screens */
+    .nav-container {
+        padding: 10px; /* Reduce padding for smaller screen size */
+    }
+
+    .nav-links ul li {
+        padding: 10px 5px; /* Reduce padding for more compact nav items */
+    }
+
+    /* Reduce text size for footer on smaller screens */
+    .footer {
+        font-size: 0.9rem; /* Make footer text smaller for better fit */
+        padding: 20px 0; /* Reduce padding to save space */
+    }
+
+    /* Adjust circular image for small screens */
+    .circular-image {
+        width: 120px; /* Make the circular image smaller */
+        height: 120px; /* Keep it circular */
+        margin-top: 100px; /* Adjust top margin to balance spacing */
+    }
+
+    /* Make contact section more compact */
+    .contact-section {
+        padding: 15px;
+        width: 100%; /* Ensure contact section takes full width */
+        margin-top: 15px; /* Add top margin for spacing */
+        left: 200px; /* Move the section to the left */
+    }
+}
+
+
+
+/* Styling for the Arcade Game Website and Nilda Pinto SBO link */
+.arcade-link a {
+    text-decoration: none; /* Remove the underline from the link */
+    color: #ffffff; /* Default text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Hover effect for the link */
+.arcade-link a:hover {
+    color: #ff5733; /* Set your desired hover color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Default styling for game links */
+.game-link {
+    text-decoration: none; /* Removes underline from the link */
+    color:  #fff; /* Default color */
+    font-weight: bold; /* Makes the text bold */
+    transition: color 0.3s ease; /* Smooth transition effect for color */
+}
+
+/* Hover effect for game links */
+.game-link:hover {
+    color: #ff5733; /* Change to your desired hover color */
+}
+

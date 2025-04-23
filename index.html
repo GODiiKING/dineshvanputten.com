@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the document type and sets the language to English -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures proper rendering in IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables responsive design -->
+    <title>Dinesh van Putten</title> <!-- Sets the title of the webpage -->
+
+    <!-- Link to the main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon links for various devices and sizes -->
+    <link rel="icon" type="image/png" href="images/site.webmanifest"/>
+    <link rel="icon" type="image/png" href="images/favicon.ico"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
+    <link rel="icon" type="image/png" sizes="180x180" href="images/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" href="images/android-chrome-192x192.png"/>
+    <link rel="icon" type="image/png" href="images/android-chrome-512x512.png"/>
+
+    <!-- Preconnect to optimize loading of Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts links for Lexend Giga and Poppins fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph metadata for social sharing -->
+    <meta property="og:image" content="/images/favicon.ico"> 
+    <!-- Specifies the image that will appear when the website is shared on social media platforms (e.g., Facebook, Twitter). This image is typically the favicon or a relevant image for the page. -->
+    <meta property="og:title" content="Dinesh van Putten Portfolio">
+    <!-- Defines the title of the page that will be displayed when shared on social media. This helps provide context for the content of the shared link. -->
+    <meta property="og:description" content="Welcome to my website.">
+<!-- Provides a brief description of the website content. This is often displayed under the title when the link is shared, helping users understand what the page is about. -->
+<meta property="og:url" content="https://dineshvanputten.com">
+<!-- Specifies the URL of the webpage that will be shared. It ensures that the correct link is used when the content is shared on social platforms. -->
+</head>
+
+<body class="dark-theme">
+    <!-- Main header section -->
+    <section class="header">
+        <!-- Navigation container -->
+        <div class="nav-container">
+            <nav class="logo">
+                <!-- Navigation links -->
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li> <!-- Link to home page -->
+                        <li><a href="PortfolioAboutPage.html">ABOUT</a></li> <!-- Link to about page -->
+                        <li><a href="PortfolioProjectPage.html">PROJECTS</a></li> <!-- Link to projects page -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Header text box -->
+        <div class="text-box">
+            <h1>Dinesh <br>van Putten</h1> <!-- Main heading -->
+        </div>
+
+        <!-- Image and profile section -->
+        <div class="image-container">
+            <img src="images/myphoto.jpg" alt="MyPh" class="circular-image"> <!-- Circular profile image -->
+            <br>
+            <p class="profile-text">My name is Dinesh van Putten.</p> <!-- Displaying the user's name as part of the profile text -->
+            <p class="profile-text">I am a software development student.</p> <!-- Displaying the user's current role or profession as part of the profile text -->
+
+
+            <!-- Social media icons -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/dinesh-van-putten-69441b18a/" target="_blank">
+                    <img src="images/linkedin1.png" alt="LinkedIn" class="social-icon"> <!-- LinkedIn icon -->
+                </a>
+                <a href="https://github.com/GODiiKING" target="_blank">
+                    <img src="images/github1.png" alt="GitHub" class="social-icon"> <!-- GitHub icon -->
+                </a>
+                <a href="https://www.freecodecamp.org/GODiKING" target="_blank">
+                    <img src="images/ffc1.jpeg" alt="freeCodeCamp" class="social-icon"> <!-- freeCodeCamp icon -->
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script for smooth navigation transition -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all anchor tags on the page (links)
+        const links = document.querySelectorAll('a'); 
+        
+        // Loop through each link to add an event listener
+        links.forEach(link => {
+            // Add a click event listener to each link
+            link.addEventListener('click', function (event) {
+                const href = this.getAttribute('href'); // Get the 'href' attribute value of the clicked link
+                
+                // Check if the href is not empty and doesn't start with '#' (to ignore anchor links)
+                if (href && !href.startsWith('#')) {
+                    event.preventDefault(); // Prevent the default link behavior (immediate navigation)
+                    
+                    // Add a fade-out animation to the body for smooth transition
+                    document.body.style.animation = 'fadeOut 0.2s ease-out'; 
+                    
+                    // Wait for the animation to finish, then navigate to the link's destination
+                    setTimeout(() => {
+                        window.location.href = href; // Perform the actual navigation after 500ms delay
+                    }, 500); // Delay matches the animation duration (0.2s fade-out + 300ms buffer)
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

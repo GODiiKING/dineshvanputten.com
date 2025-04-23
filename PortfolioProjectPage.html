@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information and link to external resources -->
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 for proper display of text -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the site responsive on all screen sizes -->
+    
+    <!-- Favicon links for different devices -->
+    <link rel="icon" type="image/png" href="images/site.webmanifest"/> <!-- Manifest file for PWA -->
+    <link rel="icon" type="image/png" href="images/favicon.ico"/> <!-- Default favicon -->
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png"/> <!-- Favicon for 32x32 resolution -->
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png"/> <!-- Favicon for 16x16 resolution -->
+    <link rel="icon" type="image/png" href="images/apple-touch-icon.png"/> <!-- Apple touch icon for iOS -->
+    <link rel="icon" type="image/png" href="images/android-chrome-192x192.png"/> <!-- Favicon for Android Chrome -->
+    <link rel="icon" type="image/png" href="images/android-chrome-512x512.png"/> <!-- High-resolution favicon for Android Chrome -->
+
+    <!-- Open Graph metadata for social media sharing -->
+    <meta property="og:title" content="Dinesh van Putten Portfolio"> <!-- Title for sharing on social media -->
+    <meta property="og:description" content="Welcome to my website."> <!-- Description for social media -->
+    <meta property="og:url" content="https://dineshvanputten.com"> <!-- URL for social media -->
+
+    <!-- Page title displayed in the browser tab -->
+    <title>Project</title>
+    
+    <!-- Link to external stylesheet for page styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon for the page -->
+    <link rel="icon" type="image/png" href="images/favicon.ico"/>
+    
+    <!-- Preconnect to Google's font services for improved performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect to the font API -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnect to Google Fonts for faster font loading -->
+    
+    <!-- Link to Google Fonts for the 'Poppins' font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme"> <!-- The body tag with a dark theme class applied -->
+
+    <!-- Header Section: Navigation Bar with links to various pages -->
+    <section class="header-2">
+        <div class="nav-container">
+            <nav class="logo"> <!-- Navigation container -->
+                <div class="nav-links"> <!-- Navigation links section -->
+                    <ul> <!-- List of navigation links -->
+                        <li><a href="index.html">HOME</a></li> <!-- Link to Home page -->
+                        <li><a href="PortfolioAboutPage.html">ABOUT</a></li> <!-- Link to About page -->
+                        <li><a href="PortfolioProjectPage.html">PROJECTS</a></li> <!-- Link to Projects page -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Project Section: Highlights two key projects -->
+    <section>
+        <!-- First Project: Arcade Game Website -->
+        <div class="project-box">
+            <a href="ArcadeLobby/MainLobby/mainlobby.html"> <!-- Link to the project's main lobby -->
+                <img src="images/project2.png" alt="Arcade Game Project" class="project-image"> <!-- Image preview of the project -->
+            </a>
+            <!-- Project title and description -->
+            <div class="project-description">
+                <h3 class="arcade-link">
+                    <a href="#" id="arcadeLink">Arcade Game Website</a> <!-- Placeholder link -->
+                </h3>
+                
+                <script>
+                    document.getElementById('arcadeLink').addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent the default behavior of the anchor tag
+                        window.open('ArcadeLobby/MainLobby/mainlobby.html', '_blank'); // Open the page in a new tab
+                    });
+                </script>
+                
+
+                <p>
+                    <!-- Brief description of the project's purpose -->
+                    This project allowed me to apply my learning in HTML, CSS, and JavaScript 
+                    <!-- Mention of the main focus of the project -->
+                    to create a site with six engaging games.
+                </p>
+                
+                <ul>
+                    <li>
+                        <b><a href="#" id="spaceInvasion">Invaders</a>:</b> A classic shooter game.
+                    </li>
+                    <li>
+                        <b><a href="#" id="brickBreaker">Brick Breaker</a>:</b> A ball-and-paddle game.
+                    </li>
+                    <li>
+                        <b><a href="#" id="dragonRepeller">Dragon Repeller</a>:</b> An adventure game.
+                    </li>
+                    <li>
+                        <b><a href="#" id="flappyBird">Flappy Bird</a>:</b> A simple but addictive game.
+                    </li>
+                    <li>
+                        <b><a href="#" id="ticTacToe">Tic Tac Toe</a>:</b> A two-player strategy game.
+                    </li>
+                    <li>
+                        <b><a href="#" id="mathGame">Math Game</a>:</b> A fun educational game.
+                    </li>
+                </ul>
+                
+                <script>
+                    // Attach click event listeners to each link
+                    document.getElementById('spaceInvasion').addEventListener('click', function (event) {
+                        event.preventDefault();
+                        window.open('ArcadeLobby/SpaceInvasion/invaders/spaceinvasion.html', '_blank');
+                    });
+                
+                    document.getElementById('brickBreaker').addEventListener('click', function (event) {
+                        event.preventDefault();
+                        window.open('ArcadeLobby/BrickBreaker/brickbreaker.html', '_blank');
+                    });
+                
+                    document.getElementById('dragonRepeller').addEventListener('click', function (event) {
+                        event.preventDefault();
+                        window.open('ArcadeLobby/RPG/rpg.html', '_blank');
+                    });
+                
+                    document.getElementById('flappyBird').addEventListener('click', function (event) {
+                        event.preventDefault();
+                        window.open('ArcadeLobby/FlappyBirdGame/flappybirdgame.html', '_blank');
+                    });
+                
+                    document.getElementById('ticTacToe').addEventListener('click', function (event) {
+                        event.preventDefault();
+                        window.open('ArcadeLobby/TicTacToe/tictactoe.html', '_blank');
+                    });
+                
+                    document.getElementById('mathGame').addEventListener('click', function (event) {
+                        event.preventDefault();
+                        window.open('ArcadeLobby/MathGame/mathgame.html', '_blank');
+                    });
+                </script>
+                
+                <!-- CSS to remove link decoration -->
+                <style>
+                    a {
+                        text-decoration: none; /* Remove underline */
+                        color: inherit; /* Use inherited color for links (can change as needed) */
+                    }
+                    
+                    /* Optional: Hover effect without underline */
+                    a:hover {
+                        color: #f39c12; /* Example color change on hover */
+                    }
+                </style>
+                
+                
+                <p>
+                    <!-- Explains the technologies used in the project -->
+                    I used HTML for structure, CSS for design, and JavaScript for game interactivity, 
+                    <!-- Highlights the personal learning outcome -->
+                    improving my skills in these technologies.
+                </p>
+                
+            </div>
+        </div>
+    
+        <!-- Second Project: Nilda Pinto SBO Website -->
+        <div class="project-box">
+            <a href="NildaPintoSBOWebsite/NildaPintoSBOHomePage.html"> <!-- Link to the project's homepage -->
+                <img src="images/project3.png" alt="Arcade Game Project" class="project-image"> <!-- Image preview of the project -->
+            </a>
+            <div class="project-description">
+                <h3 class="arcade-link">
+                    <a href="NildaPintoSBOWebsite/NildaPintoSBOHomePage.html" target="_blank">Nilda Pinto SBO Website</a> <!-- External link to the project -->
+                </h3>
+
+                <p>
+                    <!-- Introduction to the project and its significance -->
+                    This project was my first web development challenge 
+                    <!-- Specifies the project's goal and technologies used -->
+                    where I created a website for Nilda Pinto SBO using HTML and CSS.
+                </p>
+                
+
+                <ul>
+                    <!-- Key features of the project listed in bullet points -->
+                    <li>
+                        <!-- Highlights the purpose of the project in showcasing educational offerings -->
+                        Showcased the school’s educational programs.
+                    </li>
+                    <li>
+                        <!-- Emphasizes the use of responsive design to adapt the layout for different screen sizes -->
+                        Focused on responsive design using media queries.
+                    </li>
+                    <li>
+                        <!-- Notes the inclusion of visual elements to improve user interaction and interest -->
+                        Used visual elements to enhance engagement.
+                    </li>
+                    <li>
+                        <!-- Stresses the importance of clear content organization for better usability -->
+                        Organized content clearly for easy navigation.
+                    </li>
+                </ul>
+                
+
+                <p>
+                    <!-- Summary of skills gained from the project -->
+                    This project improved my skills in web design, responsive layouts, 
+                    <!-- Emphasis on practical application in developing user-friendly websites -->
+                    and creating effective online platforms.
+                </p>
+
+            </div>
+        </div>
+
+
+        <!-- Third Project: Nilda Pinto SBO Website -->
+        <div class="project-box">
+            <a href="FearNexus/index.html"> <!-- Link to the project's homepage -->
+                <img src="FearNexus/images/homebg.png" alt="Fear Nexus Project" class="project-image"> <!-- Image preview of the project -->
+            </a>
+            <div class="project-description">
+                <h3 class="arcade-link">
+                    <a href="FearNexus/index.html" target="_blank">Fear Nexus</a> <!-- External link to the project -->
+                </h3>
+
+                <p>
+                    <!-- Introduction to the project and its significance -->
+                    Fear Nexus is a web-based game that uses HTML-canvas, CSS, and JavaScript to deliver an engaging and eerie gaming experience.  
+                    <!-- Specifies the project's goal and technologies used -->
+                    Gameplay is complemented by dynamic background music and creating a captivating atmosphere for players.
+                </p>
+                
+
+                <ul>
+                    <!-- Key features of the project listed in bullet points -->
+                    <li>
+                        <!-- Highlights the purpose of the project in showcasing educational offerings -->
+                        Fear Nexus is a school project designed to showcase skills in web development and game design.
+                    </li>
+                    <li>
+                        <!-- Notes the inclusion of visual elements to improve user interaction and interest -->
+                        Includes eerie visuals, dynamic background music to immerse the player in a horror-themed experience.
+                    </li>
+                </ul>
+                
+                
+
+                <p>
+                    <!-- Summary of skills gained from the project -->
+                    This project improved my skills in web development, integrating dynamic audio,
+                    <!-- Emphasis on practical application in developing user-friendly websites -->
+                    and creating immersive horror-themed gaming experiences.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Script for smooth navigation transition -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all anchor tags on the page (links)
+        const links = document.querySelectorAll('a'); 
+        
+        // Loop through each link to add an event listener
+        links.forEach(link => {
+            // Add a click event listener to each link
+            link.addEventListener('click', function (event) {
+                const href = this.getAttribute('href'); // Get the 'href' attribute value of the clicked link
+                
+                // Check if the href is not empty and doesn't start with '#' (to ignore anchor links)
+                if (href && !href.startsWith('#')) {
+                    event.preventDefault(); // Prevent the default link behavior (immediate navigation)
+                    
+                    // Add a fade-out animation to the body for smooth transition
+                    document.body.style.animation = 'fadeOut 0.2s ease-out'; 
+                    
+                    // Wait for the animation to finish, then navigate to the link's destination
+                    setTimeout(() => {
+                        window.location.href = href; // Perform the actual navigation after 500ms delay
+                    }, 500); // Delay matches the animation duration (0.2s fade-out + 300ms buffer)
+                }
+            });
+        });
+    });
+</script>
+
+    
+</body>
+</html>

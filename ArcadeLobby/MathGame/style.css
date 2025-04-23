@@ -1,0 +1,218 @@
+/* Import the "Luckiest Guy" font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+/* Reset padding and margin for all elements */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for the body element */
+body {
+  font-family: 'Luckiest Guy', cursive; /* Use the imported font */
+  background-color: #2f2f48; /* Set the background color */
+  background-image: url('https://wallpapercave.com/wp/wp9133569.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Make the background cover the whole viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 100vh; /* Ensure the body takes the full viewport height */
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+
+/* Styling for the header */
+header {
+  background: transparent; /* Set background to transparent */
+}
+
+/* Set container width and center it */
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+/* Styling for the navigation bar */
+.nav {
+  overflow: hidden; /* Ensure content inside doesn't overflow */
+  background: transparent; /* Set background to transparent */
+  color: #fff; /* White text color */
+  padding: 20px 0; /* Padding for top and bottom */
+}
+
+
+/* Style for the h2 in the navigation bar */
+.nav h2 {
+  font-size: 2rem; /* Font size for the title */
+  float: left; /* Align to the left */
+}
+
+/* Float the navigation bar to the right */
+nav {
+  float: right;
+}
+
+/* Remove bullets from the list */
+nav ul {
+  list-style-type: none;
+}
+
+/* Style for each list item in the navigation */
+nav li {
+  font-size: 1.3rem; /* Set font size */
+  margin-top: 5px; /* Add space above the list items */
+  float: left; /* Align list items horizontally */
+  padding: 0 15px; /* Add padding between list items */
+}
+
+/* Style for the links inside the navigation items */
+nav a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* White text color */
+}
+
+/* Styling for the current page link (adds a small dash below the link) */
+.current a::after {
+  content: '-'; /* Dash under the current link */
+  font-size: 4px; /* Set the size of the dash */
+  background-color: white; /* White color for the dash */
+  display: block; /* Display the dash as a block */
+}
+
+/* Wrapper for the main content using CSS Grid */
+.wrapper {
+  display: grid;
+  grid-template-columns: 82% 18%; /* Define two columns: main (82%) and sidebar (18%) */
+}
+
+/* Styling for the equation box */
+.equation {
+  position: relative; /* Set position relative to allow absolute positioning of the overlay */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9); /* Add shadow to the box */
+  font-size: 5.2vw; /* Responsive font size */
+  background: #2f2f48; /* Fallback color */
+  background-image: url('https://wallpapercave.com/wp/wp9133569.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Make the background cover the whole viewport */
+  background-position: center; /* Center the background image */
+  overflow: hidden;
+  border-radius: 3px; /* Rounded corners */
+  text-align: center; /* Center the text */
+  margin: 10px 10px 0px 10px; /* Add margin around the box */
+}
+
+/* Adding the overlay effect */
+.equation::before {
+  content: ""; /* Create an empty content for the pseudo-element */
+  position: absolute; /* Position it absolutely within the .equation */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: 0; /* Align to the bottom */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay (adjust the alpha value as needed) */
+  border-radius: 3px; /* Match border radius with the parent */
+  z-index: 1; /* Ensure the overlay is above the background but below the text */
+}
+
+/* Styling for the h1 inside the equation */
+.equation h1 {
+  display: inline; /* Display h1 inline */
+  padding: 20px; /* Add padding around the text */
+  position: relative; /* Position text relative to ensure it appears above the overlay */
+  z-index: 2; /* Ensure text is above the overlay */
+}
+
+
+/* Styling for the answer options box */
+.answer-options {
+  font-size: 5.2vw; /* Responsive font size */
+  margin-right: 10px; /* Add right margin */
+}
+
+/* Styling for individual answer option buttons */
+.options {
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 3px; /* Rounded corners */
+  margin-top: 10px; /* Add margin at the top */
+  color: #fff; /* White text color */
+  transition: 2s; /* Smooth transition effect */
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9); /* Add shadow to the buttons */
+}
+
+/* Media query for devices with max width of 768px */
+@media(max-width: 768px) {
+  /* Adjust font size and alignment for smaller screens */
+  .nav h2 {
+    font-size: 1.5rem; /* Reduce font size */
+    float: none; /* Remove float */
+    text-align: center; /* Center align the title */
+  }
+
+  nav {
+    float: none; /* Remove float from nav */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align the navigation */
+  }
+
+  nav li {
+    font-size: 1rem; /* Reduce the font size of nav items */
+  }
+}
+
+/* Media query for devices with max width of 480px */
+@media(max-width: 480px) {
+  /* Further adjustments for smaller screens */
+  .nav h2 {
+    float: none; /* Remove float */
+    text-align: center; /* Center the title */
+  }
+
+  .equation h1 {
+    display: inline; /* Ensure h1 displays inline */
+    padding: 10px; /* Reduce padding */
+  } 
+
+  nav li {
+    font-size: 0.8rem; /* Reduce font size of nav items */
+  }
+}
+
+#info {
+  position: fixed; /* Keeps it in a fixed position relative to the viewport */
+  bottom: 18px; /* Set it 20px from the bottom edge */
+  left: 10px; /* Set it 20px from the left edge */
+  width: 200px; /* Adjusted width to make the box smaller */
+  color: rgba(255, 255, 255, 0.9); /* Text color for better visibility */
+  font-weight: bold; /* Make text thicker */
+  font-size: 18px; /* Reduced font size for a smaller look */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for depth */
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  padding: 10px; /* Reduced padding to make the box smaller */
+  border-radius: 8px; /* Rounded corners */
+  z-index: 100; /* Ensure it's on top */
+}
+
+
+
+.back-to-games {
+  display: inline-block; /* Makes the link behave like a box */
+  padding: 10px 20px; /* Adds space inside the box */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  color: white; /* White text color */
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Adds a border */
+  border-radius: 5px; /* Slight rounding of the corners */
+  text-decoration: none; /* Removes the underline from the link */
+  font-size: 18px; /* Adjusts the font size */
+  margin-top: 1px; /* Increased space above the link to push it lower */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.back-to-games:hover {
+  background-color: rgb(174, 41, 41); /* Darkens background on hover */
+  border-color: rgba(255, 255, 255, 1); /* Lightens border on hover */
+}

@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Set the background image */
+    background-image: url('https://wallpapercave.com/wp/wp9133701.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Make the background cover the whole viewport */
+    background-position: center; /* Center the background image */
+    overflow: hidden;
+}
+
+.wrapper {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    color: white; /* Keep container text white */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    background: black;
+    border: 1px solid #C779D0;
+    cursor: pointer;
+    line-height: 150px;
+    font-size: 100px;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+}
+
+.status {
+    font-size: 70px;
+    color: white; /* Set player turn text color to white */
+    margin: 40px auto 20px auto;
+}
+
+.restart {
+    padding: 10px;
+    font-size: 45px;
+    color: rgb(238, 25, 25);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#info {
+    position: fixed; /* Keeps it in a fixed position relative to the viewport */
+    bottom: 20px; /* Set it 20px from the bottom edge */
+    left: 20px; /* Set it 20px from the left edge */
+    width: 300px; /* Adjust the width as needed */
+    color: rgba(255, 255, 255, 0.9); /* Text color for better visibility */
+    font-weight: bold; /* Make text thicker */
+    font-size: 24px; /* Increase the font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for depth */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    z-index: 100; /* Make sure it's on top */
+}
+
+
+.back-to-games {
+    display: inline-block; /* Makes the link behave like a box */
+    padding: 10px 20px; /* Adds space inside the box */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: white; /* White text color */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Adds a border */
+    border-radius: 5px; /* Slight rounding of the corners */
+    text-decoration: none; /* Removes the underline from the link */
+    font-size: 18px; /* Adjusts the font size */
+    margin-top: 30px; /* Increased space above the link to push it lower */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.back-to-games:hover {
+    background-color: rgb(174, 41, 41); /* Darkens background on hover */
+    border-color: rgba(255, 255, 255, 1); /* Lightens border on hover */
+}

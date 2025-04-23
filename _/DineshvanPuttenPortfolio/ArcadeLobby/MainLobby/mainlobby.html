@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Lobby</title>
+    <link rel="icon" type="image/png" href="controllericon.png"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="enter-lobby">Enter Lobby</button>
+        <div class="auth-buttons">
+            <button id="login">Login</button>
+            <button id="signup">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Audio element with autoplay and loop attributes -->
+    <audio id="background-audio" autoplay loop>
+        <source src="c:\Users\dinoz\OneDrive\Desktop\Code Database\Alfa-College\Code Database\Games\Arcade Lobby\Main Lobby\Disco, Driving Drum Machine, Synthesizer, Bass, Piano, Guitars, Instrumental, Clubby, Euphoric, Chicago, New York, 115 BPM.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="bubbles">
+        <img src="images/giphy.gif" alt="img">
+        <img src="images/giphy.gif" alt="img">
+        <img src="images/giphy.gif" alt="img">
+        <img src="images/giphy.gif" alt="img">
+        <!-- more images here -->
+    </div>
+
+    <!-- Loading Screen -->
+<div id="loading-screen" class="loading" style="display:none;">
+    <div class="black-box"> <!-- New black box -->
+        <div class="percent">0%</div>
+        <label class="text">Loading...</label>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
