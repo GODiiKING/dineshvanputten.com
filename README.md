@@ -41,14 +41,17 @@ The website includes:
 
 ### Home Page
 The home page introduces me as a software development student and provides links to other sections of my portfolio, such as About, Projects, CV, and Contact pages.
+![alt text](home-1.png)
 
 ### About Page
 The About page provides a deeper look into my educational background, learning journey, and future goals.
+![alt text](about-1.png)
 
 ### Projects Page
 The Projects page showcases some of my key projects, including:
 - **Arcade Game Website**: A collection of games like Tic Tac Toe, Math Game, and Space Invasion.
 - **Nilda Pinto SBO Website**: A website built for a school project using HTML and CSS.
+- ![alt text](project-1.png)
 
 ### Contact Page
 The Contact page provides my contact information and links to my social media profiles.
