@@ -10,8 +10,6 @@
     background-color: black; /* Sets a dark background theme for elements with this class */
 }
 
-
-
 /* --- Header and Navigation Styling --- */
 /* Main header styling */
 /* --- logo and menu design --- */
@@ -342,30 +340,6 @@ nav img {
     color: #fff; /* Sets the text color to white */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds smooth animations for transform and box-shadow when hovered */
 }
-
-.project-box-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-  
-    /* 🔑 most important */
-    height: auto;       /* container grows with image */
-    overflow: visible;  /* don’t cut the image */
-  }
-  
-  .project-image {
-    width: auto;        /* keep original size */
-    max-width: 100%;    /* scale down if container is small */
-    height: auto;       /* keep full proportions */
-    object-fit: contain; /* ensure no cropping */
-    display: block;
-  }
-  
 
 
 /* Hover effect for project box */
