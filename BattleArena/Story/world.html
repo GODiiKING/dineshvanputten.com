@@ -24,6 +24,72 @@
         <h3><a href="../Story/world.html" style="color: #da4a6c !important;">⟹ Godthrone's stories ⟸</a></h3>
         <p>Learn about the mighty warriors, their powers, and alignments</p>
     </header>
+    <div class="menu-panel">
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <div id="menuContent">
+          <a href="../mainmenu.html">Home</a>
+          <a href="../browsergame.html">Browser Game</a>
+          <a href="../lore.html">Lore</a>
+          <a href="../Protagonist/protagonist.html">Protagonist</a>
+        </div>
+      </div>
+      
+      <style>
+      .menu-panel {
+        position: fixed;
+        top: 20px;     /* distance from top */
+        right: 20px;   /* distance from right */
+        z-index: 9999;
+        text-align: right;
+      }
+      
+      /* Button styling */
+      .menu-toggle {
+        background: linear-gradient(45deg, #da4a6c, #ff6b9d);
+        border: none;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      
+      /* Menu content */
+      #menuContent {
+        display: none; /* hidden initially */
+        margin-top: 8px;
+        background: rgba(0,0,0,0.8);
+        border-radius: 8px;
+        border: 2px solid #da4a6c;
+        text-align: right; /* aligns links to right */
+      }
+      
+      /* Links inside menu */
+      #menuContent a {
+        display: block;
+        color: #ff6b9d;
+        text-decoration: none;
+        margin: 5px 0;
+      }
+      
+      #menuContent a:hover {
+        color: #ffc;
+      }
+      </style>
+      
+      <script>
+      function toggleMenu() {
+        const menu = document.getElementById('menuContent');
+        if (menu.style.display === 'none' || menu.style.display === '') {
+          menu.style.display = 'block';
+        } else {
+          menu.style.display = 'none';
+        }
+      }
+      </script>
+      
+
+
+
          <!-- Main Content Section -->
     <section class="content">
         <!-- Path Lore Section -->

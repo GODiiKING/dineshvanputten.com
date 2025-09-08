@@ -15,148 +15,16 @@
     <script src="js/enemy.js"></script>
 </head>
 <body>
-    <div class="header">
-        <p>Play the greatest battle arena in the world!</p>
-        <h3><a href="lore.html" style="color: #da4a6c !important;">⟹ Godthrone's Lore ⟸</a></h3>
-        <h2>Choose your character!</h2>
-    </div>
-
-    <div class="interface">
-        <a href="#" onclick="GameManager.setGameStart('Warrior')">
-            <img src="img/avatar-player/warrior.png" alt="warrior">
-            <div>
-                <h3>Warrior</h3>
-                <p>Warrior have high health and stamina</p>
-                <p>Path of Dreadnought (Lawful Evil)</p>
-                <p>No mere Men, no mere God, embodies what it means to be above any in combat.</p>
-            </div>
-        </a>
-        <a href="#" onclick="GameManager.setGameStart('Rogue')">
-            <img src="img/avatar-player/rogue.png" alt="rogue">
-            <div>
-                <h3>Rogue</h3>
-                <p>Rogue have high speed and stamina</p>
-                <p>Path of Nightblade (Chaotic Neutral)</p>
-                <p>He was a man, but not a man.... but a waiting dark.... A shadowy incorporeal entity dwelling in a human body. The Unspeakable, He Who is Not to be Named, 
-                    Lord of Interstellar Spaces. Eater of Names, embodies what it means to be nothingness.</p>
-            </div>
-        </a>
-        <a href="#" onclick="GameManager.setGameStart('Mage')">
-            <img src="img/avatar-player/mage.png" alt="mage">
-            <div>
-                <h3>Mage</h3>
-                <p>Mage have high stamina and speed</p>
-                <p>Path of Rift Blade (Lawful Neutral)</p>
-                <p>Stalker among the Stars.... Equilibrium of Creation.</p>
-            </div>
-        </a>
-        <a href="#" onclick="GameManager.setGameStart('Hunter')">
-            <img src="img/avatar-player/hunter.png" alt="hunter">
-            <div>
-                <h3>Hunter</h3>
-                <p>Hunter have high health and speed </p>
-                <p>Path of Mad Doctor (Chaotic Good)</p>
-                <p></p>
-            </div>
-        </a>
-    </div>
-    <br>
-    <!-- Container to hold both text-1 divs -->
-    <div class="container">
-        <div class="text-1" id="text-info">
-            <div class="text-content">
-                <img src="img/avatar-player/warrior.png" alt="warrior">
-                <div class="text-details">
-                    <h3>Warrior</h3>
-                    <p>Path of Dreadnought (Lawful Evil)</p>
-                    <h5>Lore:</h5>
-                    <h4> Ancient and Cursed</h4>
-                    <p>In the forgotten-ages, where the veils between gods and mortals were thinner than the blood in one's veins, there arose a warrior who defied the very essence of mortality.</p>
-                    <p>Not a champion of any-cause, nor a savior of any realms. When civilizations were as nothing more than whispers in the dust. Realms  both in the living and the dead, slipping between-worlds as one might walk.</p>
-                    <p>A being who transcends the boundaries of both life and death. Not crafted by mortal hands, nor brought into existence through-divine means.</p>
-                    <h4>Alignment:</h4>
-                    <p>A lawful evil character sees a well-ordered system as being easier to exploit than to necessarily follow. Example of this alignment include tyrants, cults, and mercenary types who have a strict code of conduct.</p>
-                </div>
-            </div>
+        <!-- Centered button box -->
+        <div class="button-box">
+            <a href="mainmenu.html" class="button-link">Enter Realm</a>
         </div>
     
-        <div class="text-1" id="text-info-2">
-            <div class="text-content">
-                <img src="img/avatar-player/rogue.png" alt="rogue">
-                <div class="text-details">
-                    <h3>Rogue</h3>
-                    <p>Path of Nightblade (Chaotic Neutral)</p>
-                    <h5>Lore:</h5>
-                    <h4>Shadow and Forgotten</h4>
-                    <p>In the shadows of forgotten realms and the spaces between stars, there exists a presence known only in whispers. Not a mere mortal but a conduit for an ancient force—the essence of void and silence.</p>
-                    <p>Legends speak of a figure who moves between worlds, seen only in the faintest glimmers of starlight, a being who is both man and shadow.</p>
-                    <p>Unbound by the laws of gods or men. Reminder that in the spaces we cannot see, forces older than time itself lurk, and not even the bravest dare to stand.</p>
-                    <p>Forces beyond comprehension—that we cannot see.</p>
-                    <h4>Alignment:</h4>
-                    <p>A chaotic neutral character is an individualist who follows their own heart and generally shirks rules and traditions. Although chaotic neutral characters promote the ideals of freedom, it is their own freedom that comes first; good and evil come second to their need to be free.</p>
-                    <p></p>
-                </div>
-            </div>
-        </div>
-    
-        <div class="text-1" id="text-info-3">
-            <div class="text-content">
-                <img src="img/avatar-player/mage.png" alt="mage">
-                <div class="text-details">
-                    <h3>Mage</h3>
-                    <p>Path of Rift Blade (Lawful Neutral)</p>
-                    <h5>Lore:</h5>
-                    <h4>Equilibrium and Creation</h4>
-                    <p>Spaces between worlds, a being neither bound by flesh nor fully ethereal. Equilibrium between order and entropy.</p>
-                    <p>No allegiance to gods or men, but to the universal balance that holds all existence together. Blur the lines between planes of existence.</p>
-                    <p>between the mortal and the divine, between order and chaos. Where a tear appears in the cosmic weave, severing or stitching the very essence of the universe. Tempered by an understanding that sometimes even rules must yield to the greater needs of balance.</p>
-                    <p>Not dictated by any god or mortal king.</p
-                    <h4>Alignment:</h4>
-                    <p>A lawful neutral character typically believes strongly in lawful concepts such as honor, order, rules, and tradition, but often follows a personal code in addition to, or even in preference to, one set down by a benevolent authority.</p>
-                </div>
-            </div>
-        </div>
-    
-        <div class="text-1" id="text-info-4">
-            <div class="text-content">
-                <img src="img/avatar-player/hunter.png" alt="hunter">
-                <div class="text-details">
-                    <h3>Hunter</h3>
-                    <p>Path of Mad Doctor (Chaotic Good)</p>
-                    <h5>Lore:</h5>
-                    <h4>Unorthodox and  Eldritch</h4>
-                    <p>Powers are as dark as they are miraculous, art as a volatile blend of forbidden magic and eldritch science, an unholy fusion that bridges the boundary between life and death as terrifying as they are effective.</p>
-                    <p>That strain the limits of reality—alchemy that twists nature, potions that defy logic, and incantations that pull from realms beyond human understanding and knowledge rumored to come from dealings with strange, otherworldly entities. glimpsed truth in spaces between worlds</p>
-                    <h4>Alignment:</h4>
-                    <p>A chaotic good character does what is necessary to bring about change for the better, disdains bureaucratic organizations that get in the way of social improvement, and places a high value on personal freedom, not only for oneself, but for others as well. Chaotic good characters usually intend to do the right thing, but their methods are generally disorganized and often out of sync with the rest of society.</p>
-                    <p></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div>
-</div>
+        <!-- Your scroll-to-top button remains -->
+        <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
 
-    <div class="actions">
 
-    </div>
-
-    <div class="arena">
-
-    </div>
-
-    <div class="enemy">
-
-    </div>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Optimized Lore Page</title>
     <style>
         /* Mobile Optimizations */
         
@@ -359,58 +227,12 @@
             }
         }
     </style>
-</head>
-</html>
+
 
     <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 
-    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">↑</button>
-
-    <script>
-    // Show button with full opacity when scrolling
-    window.onscroll = function() {
-        const button = document.getElementById("scrollToTop");
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            button.classList.add("show");
-        } else {
-            button.classList.remove("show");
-        }
-    };
-    // Smooth scroll to top
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-    </script>
-    <style>
-        .scroll-to-top {
-            position: fixed !important;
-            bottom: 20px !important;
-            right: 20px !important;
-            background-color: #da4a6c !important;
-            color: white !important;
-            border: none !important;
-            border-radius: 50% !important;
-            width: 50px !important;
-            height: 50px !important;
-            font-size: 20px !important;
-            cursor: pointer !important;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
-            transition: all 0.3s ease !important;
-            z-index: 9999 !important;
-            opacity: 0.5 !important;
-            display: block !important;
-        }
-        
-        .scroll-to-top:hover {
-            opacity: 1 !important;
-            transform: scale(1.1) !important;
-        }
-        </style>
-        <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+   
     
 </body>
 </html>

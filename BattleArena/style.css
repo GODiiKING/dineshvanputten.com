@@ -1,3 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend Exa', sans-serif;
+  background-image: url("godthronewallpaper.png"); /* change path to your image */
+  background-size: cover;       /* makes it cover the whole screen */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  height: 100vh;                /* ensures body covers full viewport */
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+}
+
+.button-link {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  background-color: #da4a6c;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #b63855;
+  transform: scale(1.05);
+}
+.button-link {
+  margin-left: 60px; /* pushes it a bit to the right */
+}
+
+
+
+
 img {
     width: 160px;
   }
